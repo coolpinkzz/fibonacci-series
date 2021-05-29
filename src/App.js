@@ -31,12 +31,7 @@ function App() {
 
         }
 
-        var displayresult = arr.map((data) => {
-            return (
-                <li style={{color: "white"}} >{data}</li>
-            )
 
-        })
         event.preventDefault();
     }
     function handleInput(value) {
@@ -52,7 +47,7 @@ function App() {
     }
     var displayresult = arr.map((data) => {
         return (
-            <div style={{border: "1px solid white", margin: 5, padding: 5, borderRadius: "5px"}}>
+            <div key={data.id} style={{border: "1px solid white", margin: 5, padding: 5, borderRadius: "5px"}}>
                 <p style={{minWidth: "100px", width: "fit-content"}}>{data}</p>
             </div>
         )
@@ -66,7 +61,7 @@ function App() {
     return (
         <div>
             <div style={{padding: 5}}>
-                <h2><h1>Let's Play with Fibonacci Series</h1></h2>
+                <h1>Let's Play with Fibonacci Series</h1>
             </div>
             <div className="App">
                 <form onSubmit={handleSubmit}>
